@@ -1,0 +1,21 @@
+{
+  "name": "voice-chat-frontend-v2",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@openai/agents": "^0.8.1",
+    "@openai/agents-realtime": "^0.8.1",
+    "express": "^4.18.2",
+    "zod": "^3.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0"
+  }
+}
