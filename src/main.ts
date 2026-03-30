@@ -60,9 +60,11 @@ async function startCall() {
       instructions: '你是個友善的語音助理，請用繁體中文簡潔回覆。'
     });
     
-    // Create session - SDK handles WebRTC/transport automatically
+    // Create session with API key and transport
     session = new RealtimeSession(agent, {
       apiKey: ephemeralKey,
+      transport: 'webrtc', // Use WebRTC for browser
+      model: 'gpt-4o-realtime-preview-2025-06-03',
     });
     
     // Set up event handlers
@@ -100,7 +102,7 @@ async function startCall() {
       updateStatus('❌ 連線錯誤');
     });
     
-    // Connect - SDK handles the transport
+    // Connect
     await session.connect();
     
     console.log('🎙️ Connected to OpenAI Realtime API!');
